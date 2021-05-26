@@ -1,0 +1,32 @@
+<div>
+  <div class="btn-container">
+    <button class="neg-btn"><a routerLink="">Go back</a></button>
+    <button><a routerLink="/add-photo">Add Photo</a></button>
+  </div>
+  <h2>Photos</h2>
+  <div class="photos-container">
+    <div class="photo-container" *ngFor="let photo of photos; index as i">
+      <div class="btn-title-container">
+        <h4>Title: {{ photo.title }}</h4>
+        <div>
+          <button>
+            <a
+              routerLink="/{{ photo.id }}/edit-photo"
+              [queryParams]="{ title: photo.title, url: photo.url }"
+              >Edit Photo</a
+            >
+          </button>
+          <button class="neg-btn" (click)="deletePhoto(i + 1)">
+            Delete Photo
+          </button>
+          <div *ngIf="success[i]" class="success">
+            Photo deleted successfully
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="{{ photo.url }}" alt="photo" />
+      </div>
+    </div>
+  </div>
+</div>

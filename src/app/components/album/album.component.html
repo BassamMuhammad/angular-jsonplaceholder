@@ -1,0 +1,14 @@
+<div>
+  <h2>Albums Collection</h2>
+  <div class="container">
+    <div
+      *ngFor="let album of albums"
+      class="sub-container"
+      (click)="openAlbum()"
+    >
+      <a routerLink="/{{ album.id }}/photos"
+        ><h5>{{ album.title }}</h5></a
+      >
+    </div>
+  </div>
+</div>

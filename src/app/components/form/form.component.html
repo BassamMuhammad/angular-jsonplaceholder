@@ -1,0 +1,37 @@
+<div class="container">
+  <h1>{{ heading }}</h1>
+  <form [formGroup]="form">
+    <div>
+      <label>
+        Title:
+        <input type="text" formControlName="title" required />
+        <div *ngIf="title?.invalid && title?.touched" class="error">
+          Name is required.
+        </div>
+      </label>
+    </div>
+    <div>
+      <label>
+        Url:
+        <input
+          type="text"
+          formControlName="url"
+          required
+          pattern="(https|http)://.{2,256}\.[a-z]{2,3}"
+        />
+      </label>
+      <div *ngIf="url?.invalid && url?.touched" class="error">
+        Valid password begins with http:// or https:// have 2 to 256 characters
+        and ends with .com or other top-level domains like it
+      </div>
+    </div>
+
+    <input
+      type="submit"
+      value="{{ heading }}"
+      [disabled]="form?.invalid"
+      (click)="submitForm()"
+    />
+    <div *ngIf="success" class="success">Photo added successfully</div>
+  </form>
+</div>

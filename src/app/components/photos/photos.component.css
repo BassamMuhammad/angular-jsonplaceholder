@@ -1,0 +1,57 @@
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+h2 {
+  text-align: center;
+}
+button {
+  background-color: blue;
+  color: white;
+  margin-right: 10px;
+}
+
+.neg-btn {
+  background-color: red;
+}
+
+.photos-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 200px;
+  margin: 10px;
+}
+
+.photo-container {
+  background-color: rgb(200, 200, 200);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  width: 700px;
+}
+
+.btn-title-container {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.success {
+  margin-top: 20px;
+  background-color: green;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}

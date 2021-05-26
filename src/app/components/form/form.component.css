@@ -1,0 +1,21 @@
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(200, 200, 200);
+  padding: 10px;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  background-color: green;
+  color: white;
+}
+
+* {
+  margin-bottom: 10px;
+}
